@@ -21,7 +21,9 @@ const App = () => {
 
   const handleEndGame = input => {
     let isTie = input === 'TIE';
-    if (!isTie) {
+    if (input === 'IACheckmate') {
+      setWinner('YouWon');
+    } else if (!isTie) {
       setWinner(input === userSide ? 'YouWon' : 'IAWon');
     }
     setCurrentView('GameOver');

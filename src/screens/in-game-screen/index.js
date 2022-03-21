@@ -179,13 +179,13 @@ const InGameScreen = ({userSide, iASide, endGame}) => {
 
   return (
     <View style={styles.container}>
-      <Text>Press one block to start the Game</Text>
+      <Text style={styles.title}>Press one block to start the Game</Text>
       {gamePositionUserSymbols.map(i => (
         <TouchableOpacity
           key={'button' + i.id}
           style={styles.buttonBox}
           onPress={() => updateUserChoose(i.id)}>
-          <Text>{i.symbol}</Text>
+          <Text style={styles.buttonText}>{i.symbol}</Text>
         </TouchableOpacity>
       ))}
     </View>
